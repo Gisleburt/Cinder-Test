@@ -4,4 +4,4 @@
 //#define RES_MY_RES			CINDER_RESOURCE( ../resources/, image_name.png, 128, IMAGE )
 
 // Cinder Images
-#define RES_CI_IMAGE_DANIEL		1001
+#define RES_CI_IMAGE_DANIEL		CINDER_RESOURCE( ../resources/, daniel.png, 1001, IMAGE )

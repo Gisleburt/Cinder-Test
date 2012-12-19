@@ -15,19 +15,22 @@ void WanderingStarApp::prepareSettings( Settings *settings ) {
 
 
 void WanderingStarApp::setup() {
-	myImage = gl::Texture( loadImage( loadResource( RES_CI_IMAGE_DANIEL, "IMAGE" ) ) );
+	myImage = loadImage( loadResource( RES_CI_IMAGE_DANIEL ) ) ;
+	mParticleController.addParticles( 250 );
 }
 
 void WanderingStarApp::mouseDown( MouseEvent event ) {
 }
 
 void WanderingStarApp::update() {
+	mParticleController.update();
 }
 
 void WanderingStarApp::draw() {
 	// clear out the window with black
 	gl::clear( ); 
 	gl::draw( myImage, getWindowBounds() );
+	mParticleController.draw();
 }
 
 CINDER_APP_BASIC( WanderingStarApp, RendererGl )
