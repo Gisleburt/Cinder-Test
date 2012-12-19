@@ -11,7 +11,9 @@ class WanderingStarApp : public AppBasic {
 	
 	protected:
 		gl::Texture myImage;
+		Channel32f myChannel;
 		ParticleController mParticleController;
+
 
 	public:
 		void prepareSettings( Settings *settings );

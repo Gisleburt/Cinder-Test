@@ -16,20 +16,21 @@ void WanderingStarApp::prepareSettings( Settings *settings ) {
 
 void WanderingStarApp::setup() {
 	myImage = loadImage( loadResource( RES_CI_IMAGE_DANIEL ) ) ;
-	mParticleController.addParticles( 250 );
+	//mParticleController.addParticles( 5000 );
+	myChannel = Channel32f( myImage );
 }
 
 void WanderingStarApp::mouseDown( MouseEvent event ) {
 }
 
 void WanderingStarApp::update() {
-	mParticleController.update();
+	mParticleController.update(myChannel);
 }
 
 void WanderingStarApp::draw() {
 	// clear out the window with black
 	gl::clear( ); 
-	gl::draw( myImage, getWindowBounds() );
+	//gl::draw( myImage, getWindowBounds() );
 	mParticleController.draw();
 }
 
