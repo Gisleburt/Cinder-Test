@@ -14,6 +14,8 @@ class WanderingStarApp : public AppBasic {
 		Channel32f myChannel;
 		ParticleController mParticleController;
 
+		bool mRenderImage;
+		bool mRenderParticles;
 
 	public:
 		void prepareSettings( Settings *settings );
@@ -21,5 +23,6 @@ class WanderingStarApp : public AppBasic {
 		void mouseDown( MouseEvent event );	
 		void update();
 		void draw();
+		void keyDown( KeyEvent event );
 
 };

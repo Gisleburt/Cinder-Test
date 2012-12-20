@@ -9,6 +9,8 @@ using namespace std;
 
 
 void WanderingStarApp::prepareSettings( Settings *settings ) {
+	bool mRenderImage = false;
+	bool mRenderParticles = true;
     settings->setWindowSize( 512, 515 );
     settings->setFrameRate( 60.0f );
 }
@@ -30,8 +32,21 @@ void WanderingStarApp::update() {
 void WanderingStarApp::draw() {
 	// clear out the window with black
 	gl::clear( ); 
-	//gl::draw( myImage, getWindowBounds() );
-	mParticleController.draw();
+	if( mRenderImage )
+		gl::draw( myImage, getWindowBounds() );
+	if( mRenderParticles )
+		mParticleController.draw();
+}
+
+void WanderingStarApp::keyDown( KeyEvent event ) {
+    if( event.getChar() == '1' ){
+        mRenderImage = ! mRenderImage;
+    } else if( event.getChar() == '2' ){
+        mRenderParticles = ! mRenderParticles;
+    }
+	else {
+		console() << "Key: " << event.getCode() << std::endl;
+	}
 }
 
 CINDER_APP_BASIC( WanderingStarApp, RendererGl )

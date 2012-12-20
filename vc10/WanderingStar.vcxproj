@@ -71,6 +71,12 @@
       <TargetMachine>MachineX86</TargetMachine>
       <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
     </Link>
+    <PreBuildEvent>
+      <Command>"D:\Programs\Utilities\FixVS\freepdb" $(ProjectName)</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Should fix locked files problem</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

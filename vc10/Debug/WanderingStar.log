@@ -1,4 +1,5 @@
-﻿cinder_d.lib(zutil.obj) : warning LNK4204: 'D:\Documents\Projects\WanderingStar\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+﻿  WanderingStarApp.cpp
+cinder_d.lib(zutil.obj) : warning LNK4204: 'D:\Documents\Projects\WanderingStar\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
 cinder_d.lib(trees.obj) : warning LNK4204: 'D:\Documents\Projects\WanderingStar\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
 cinder_d.lib(inftrees.obj) : warning LNK4204: 'D:\Documents\Projects\WanderingStar\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
 cinder_d.lib(inflate.obj) : warning LNK4204: 'D:\Documents\Projects\WanderingStar\vc10\Debug\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
